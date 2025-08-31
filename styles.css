@@ -607,3 +607,60 @@ a:focus {
 }
 
 /*availability*/
+/* Tiny inline fidget status badge */
+.fidget-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;                 /* space between icon and text */
+  margin-left: 0.3em;          /* small spacing from li text */
+  padding: 0.1em 0.35em;       /* compact pill shape */
+  border-radius: 8px;          /* rounded pill */
+  font-size: 0.875rem;         /* same as li text */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: default;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle depth */
+  transition: all 0.3s ease;
+  color: white;
+}
+
+/* Icon */
+.fidget-status .status-icon {
+  width: 0.75em;
+  height: 0.75em;
+}
+
+/* Hover effect */
+.fidget-status:hover {
+  filter: brightness(0.9);
+}
+
+/* AVAILABLE state */
+.fidget-status.available {
+  background-color: #4CAF50; /* green */
+}
+
+/* SOLD OUT state */
+.fidget-status.soldout {
+  background-color: #e74c3c; /* red */
+}
+
+/* Text visibility */
+.fidget-status .available-text {
+  display: inline;
+}
+
+.fidget-status .soldout-text {
+  display: none;
+}
+
+/* Switch to soldout text when badge has class .soldout */
+.fidget-status.soldout .available-text {
+  display: none;
+}
+
+.fidget-status.soldout .soldout-text {
+  display: inline;
+}
+
