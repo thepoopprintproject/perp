@@ -607,24 +607,3 @@ a:focus {
 }
 
 /*availability*/
-/* Small inline fidget status tags */
-.fidget-status {
-  display: inline-block;
-  margin-left: 0.5em;
-  padding: 0.1em 0.5em;
-  border-radius: 0.4em;
-  font-size: 0.875rem; /* same as li text */
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.fidget-status.available {
-  background-color: var(--pp-mint);
-  color: var(--pp-dark-teal);
-}
-
-.fidget-status.soldout {
-  background-color: var(--pp-sage);
-  color: var(--pp-teal);
-}
