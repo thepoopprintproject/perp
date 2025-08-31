@@ -608,12 +608,13 @@ a:focus {
 
 /*availability*/
 
-/* ========== Fidget Availability Button ========== */
+/* ========== Small Inline Fidget Status Button ========== */
 .button {
-  position: relative;
   display: inline-flex;
   align-items: center;
-  font-size: 0.75em;
+  font-size: 0.875rem; /* same as li text */
+  margin-left: 0.5em;
+  position: relative;
 }
 
 .button input {
@@ -628,98 +629,39 @@ a:focus {
 }
 
 .button .container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 1em;
-  padding: 1em 2em;
-  border-radius: 1.5em;
+  gap: 0.4em;
+  padding: 0.2em 0.6em;
+  border-radius: 0.5em;
   background: var(--pp-mint);
-  transition: 0.5s all;
+  transition: 0.3s all;
+  font-weight: 500;
 }
 
 .button .text {
   position: relative;
-  width: 10em;
-  height: 1.5em;
-  pointer-events: none;
+  height: 1em;
 }
 
-.button .text div {
+.button .text div,
+.button .text span {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  transform: translateY(-1.25em);
+  transform: translateY(-1em);
   opacity: 0;
-  transition: 0.5s all;
-  font-weight: 600;
-  font-family: var(--font-heading);
+  transition: 0.3s all;
 }
 
-.button #available:checked ~ .container {
-  background: var(--pp-mint);
-}
 .button #available:checked ~ .container .text-wa {
   opacity: 1;
   transform: translateY(0);
   color: var(--pp-dark-teal);
-}
-.button #available:checked ~ .container .text-na {
-  transform: translateY(1.25em);
-}
-.button #available:checked ~ .container .text-l {
-  transform: translateY(1.25em);
-}
-
-.button #newly:checked ~ .container {
-  background: var(--pp-cream);
 }
 .button #newly:checked ~ .container .text-na {
   opacity: 1;
   transform: translateY(0);
   color: var(--pp-accent);
 }
-.button #newly:checked ~ .container .text-wa {
-  transform: translateY(1.25em);
-}
-.button #newly:checked ~ .container .text-l {
-  transform: translateY(1.25em);
-}
-
-.button #limited:checked ~ .container {
-  background: var(--pp-sage);
-}
-.button #limited:checked ~ .container .text-l {
-  opacity: 1;
-  transform: translateY(0);
-  color: var(--pp-teal);
-}
-.button #limited:checked ~ .container .text-wa {
-  transform: translateY(1.25em);
-}
-.button #limited:checked ~ .container .text-na {
-  transform: translateY(1.25em);
-}
-
-/* Optional: simple circular SVG indicator */
-.button svg {
-  height: 2em;
-  overflow: visible;
-}
-
-.button svg path {
-  stroke-width: 6;
-  fill: transparent;
-  transition: 0.5s all;
-}
-
-.button svg .bg {
-  stroke: var(--pp-border);
-  stroke-dasharray: 2.5;
-  stroke-dashoffset: 6.25;
-}
-
-.button svg .fg {
-  stroke: var(--pp-teal);
-}
-
+.button #limited:checked ~ .containe
