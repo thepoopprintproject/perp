@@ -612,7 +612,7 @@ a:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.2em;                 /* space between icon and text */
-  margin-left: 0.3em;          /* small spacing from li text */
+  margin-left: 0.1em;          /* small spacing from li text */
   padding: 0.1em 0.35em;       /* compact pill shape */
   border-radius: 8px;          /* rounded pill */
   font-size: 0.875rem;         /* same as li text */
@@ -663,4 +663,5 @@ a:focus {
 .fidget-status.soldout .soldout-text {
   display: inline;
 }
+
 
