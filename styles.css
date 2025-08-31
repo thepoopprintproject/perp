@@ -626,6 +626,8 @@ a:focus {
   transition: all 0.3s ease;
   color: white;
   margin-left: 0;  /* optional if used inline with other elements */
+  position: relative;   /* allows fine-tuning */
+  left: -0.2em;         /* shift slightly left */
 }
 
 /* Icon */
@@ -667,3 +669,4 @@ a:focus {
 .fidget-status.soldout .soldout-text {
   display: inline;
 }
+
