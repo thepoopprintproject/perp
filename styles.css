@@ -607,61 +607,24 @@ a:focus {
 }
 
 /*availability*/
-
-/* ========== Small Inline Fidget Status Button ========== */
-.button {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.875rem; /* same as li text */
+/* Small inline fidget status tags */
+.fidget-status {
+  display: inline-block;
   margin-left: 0.5em;
-  position: relative;
+  padding: 0.1em 0.5em;
+  border-radius: 0.4em;
+  font-size: 0.875rem; /* same as li text */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.button input {
-  display: none;
-}
-
-.button label {
-  position: absolute;
-  inset: 0;
-  display: block;
-  cursor: pointer;
-}
-
-.button .container {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  padding: 0.2em 0.6em;
-  border-radius: 0.5em;
-  background: var(--pp-mint);
-  transition: 0.3s all;
-  font-weight: 500;
-}
-
-.button .text {
-  position: relative;
-  height: 1em;
-}
-
-.button .text div,
-.button .text span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(-1em);
-  opacity: 0;
-  transition: 0.3s all;
-}
-
-.button #available:checked ~ .container .text-wa {
-  opacity: 1;
-  transform: translateY(0);
+.fidget-status.available {
+  background-color: var(--pp-mint);
   color: var(--pp-dark-teal);
 }
-.button #newly:checked ~ .container .text-na {
-  opacity: 1;
-  transform: translateY(0);
-  color: var(--pp-accent);
+
+.fidget-status.soldout {
+  background-color: var(--pp-sage);
+  color: var(--pp-teal);
 }
-.button #limited:checked ~ .containe
