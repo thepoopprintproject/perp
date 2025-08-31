@@ -607,20 +607,22 @@ a:focus {
 }
 
 /*availability*/
-/* Tiny inline fidget status badge */
+/* Tiny inline fidget status badge aligned with li text */
 .fidget-status {
   display: inline-flex;
-  align-items: center;
-  gap: 0.2em;                 /* space between icon and text */
-  margin-left: 0.1em;          /* small spacing from li text */
-  padding: 0.1em 0.35em;       /* compact pill shape */
-  border-radius: 8px;          /* rounded pill */
+  align-items: center;        /* vertical center */
+  gap: 0.2em;                 
+  margin-left: 0.15em;        /* small space from text */
+  padding: 0.05em 0.35em;     /* very compact */
+  border-radius: 8px;          
   font-size: 0.875rem;         /* same as li text */
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  line-height: 1;             /* match li line height */
+  vertical-align: middle;     /* align inline with text */
   cursor: default;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle depth */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
   color: white;
 }
@@ -629,6 +631,7 @@ a:focus {
 .fidget-status .status-icon {
   width: 0.75em;
   height: 0.75em;
+  vertical-align: middle;
 }
 
 /* Hover effect */
@@ -638,12 +641,12 @@ a:focus {
 
 /* AVAILABLE state */
 .fidget-status.available {
-  background-color: #4CAF50; /* green */
+  background-color: #4CAF50; 
 }
 
 /* SOLD OUT state */
 .fidget-status.soldout {
-  background-color: #e74c3c; /* red */
+  background-color: #e74c3c; 
 }
 
 /* Text visibility */
@@ -663,5 +666,4 @@ a:focus {
 .fidget-status.soldout .soldout-text {
   display: inline;
 }
-
 
