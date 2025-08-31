@@ -607,24 +607,25 @@ a:focus {
 }
 
 /*availability*/
-/* Tiny inline fidget status badge aligned with li text */
+
+/* Standalone inline fidget status badge */
 .fidget-status {
   display: inline-flex;
-  align-items: center;        /* vertical center */
-  gap: 0.2em;                 
-  margin-left: 0.15em;        /* small space from text */
-  padding: 0.05em 0.35em;     /* very compact */
-  border-radius: 8px;          
-  font-size: 0.875rem;         /* same as li text */
+  align-items: center;
+  gap: 0.2em;
+  padding: 0.05em 0.35em;
+  border-radius: 8px;
+  font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  line-height: 1;             /* match li line height */
-  vertical-align: middle;     /* align inline with text */
+  line-height: 1;
+  vertical-align: middle;
   cursor: default;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
   color: white;
+  margin-left: 0;  /* optional if used inline with other elements */
 }
 
 /* Icon */
@@ -666,4 +667,3 @@ a:focus {
 .fidget-status.soldout .soldout-text {
   display: inline;
 }
-
