@@ -670,4 +670,50 @@ a:focus {
   display: inline;
 }
 
+/* Contact Section */
+#contact {
+  background: var(--pp-mint);
+  border-radius: 16px;
+  padding: var(--spacing-xl);
+  margin: var(--spacing-lg) var(--container-padding);
+  box-shadow: var(--pp-shadow);
+  border: 1px solid var(--pp-border);
+  text-align: center;
+}
 
+#contact h2 {
+  color: var(--pp-dark-teal);
+  margin-bottom: var(--spacing-md);
+}
+
+#contact p {
+  color: var(--pp-text-light);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.contact-links li {
+  display: inline-block;
+}
+
+.contact-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--pp-teal);
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--pp-dark-teal);
+  transform: translateY(-2px);
+}
