@@ -727,3 +727,13 @@ a:focus {
   }
 }
 
+.custom-section p {
+    margin-bottom: 1.5rem; /* increase space between paragraphs */
+}
+
+.custom-section ul li {
+    margin-bottom: 0.75rem; /* increase space between list items */
+}
+
+
+
