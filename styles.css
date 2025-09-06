@@ -673,44 +673,63 @@ a:focus {
 //*CONTACT SECTION*//
 
 
+/* Footer Contacts - Desktop and Mobile */
 .footer-contacts {
   margin-top: var(--spacing-md);
-  color: #ffffff;
   text-align: center;
   font-weight: 600;
   font-size: 1.1rem;
+  color: #ffffff;  /* default text color */
 }
 
+/* Link States & Animated Underline */
 .footer-contacts a {
-  color: #ffffff;
-  text-decoration: underline;
-  margin: 0 4px; /* spacing around separators */
+  color: #ffffff !important;       /* white text */
+  text-decoration: none;            /* remove default underline */
+  position: relative;               /* for pseudo-element underline */
+  margin: 0 4px;                    /* spacing around separators */
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
+/* Pseudo-element for underline */
+.footer-contacts a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;                     /* distance from text */
+  width: 0%;
+  height: 2px;
+  background-color: var(--pp-accent); /* gold accent underline */
+  transition: width 0.3s ease;
+}
+
+/* Animate underline on hover */
+.footer-contacts a:hover::after {
+  width: 100%;
+}
+
+/* Hover text color */
 .footer-contacts a:hover {
-  color: var(--pp-accent); /* golden accent on hover */
-  transform: translateY(-2px);
+  color: var(--pp-accent) !important;
 }
 
-
+/* Responsive Footer Contacts */
+@media (max-width: 480px) {
   .footer-contacts {
-  margin-top: var(--spacing-md);
-  color: #ffffff;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
+    display: flex;
+    flex-direction: column;   /* stack links vertically */
+    gap: 0.5rem;              /* spacing between links */
+    align-items: center;      /* center align */
+    font-size: 1rem;          /* slightly smaller text */
+  }
 
-.footer-contacts a {
-  color: #ffffff !important;       /* ensures white color overrides browser default */
-  text-decoration: underline;
-  margin: 0 4px;                   /* spacing around separators */
-  transition: all 0.3s ease;
-}
+  .footer-contacts a {
+    margin: 0;                /* remove inline margins on stacked layout */
+  }
 
-.footer-contacts a:hover {
-  color: var(--pp-accent) !important;  /* hover color override */
-  transform: translateY(-2px);
+  /* Remove separators on mobile */
+  .footer-contacts a + a::before {
+    content: none;
+  }
 }
-
