@@ -451,7 +451,7 @@ p {
 /* Footer */
 .footer {
   position: relative;
-  background: url('image.jpg') no-repeat center center;
+  background: url('footer.png') no-repeat center center;
   background-size: cover;
   color: var(--pp-surface);
   text-align: center;
@@ -734,6 +734,7 @@ a:focus {
 .custom-section ul li {
     margin-bottom: 0.75rem; /* increase space between list items */
 }
+
 
 
 
