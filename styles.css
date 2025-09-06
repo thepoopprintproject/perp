@@ -673,28 +673,44 @@ a:focus {
 //*CONTACT SECTION*//
 
 
-.footer .contact-links {
-  list-style: none;
-  padding: 0;
+.footer-contacts {
   margin-top: var(--spacing-md);
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-lg);
-  flex-wrap: nowrap;   /* keeps all links in one line */
-}
-
-.footer .contact-links li {
-  display: inline;    /* ensures horizontal layout */
-}
-
-.footer .contact-links a {
-  text-decoration: underline; /* underline the links */
+  color: #ffffff;
+  text-align: center;
   font-weight: 600;
-  color: #ffffff;             /* white text */
   font-size: 1.1rem;
+}
+
+.footer-contacts a {
+  color: #ffffff;
+  text-decoration: underline;
+  margin: 0 4px; /* spacing around separators */
   transition: all 0.3s ease;
 }
 
-.footer .contact-links a:hover {
-  color: var(--pp-accent);    /* golden accent on hover */
-  transform: tran
+.footer-contacts a:hover {
+  color: var(--pp-accent); /* golden accent on hover */
+  transform: translateY(-2px);
+}
+
+
+  .footer-contacts {
+  margin-top: var(--spacing-md);
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.footer-contacts a {
+  color: #ffffff;
+  text-decoration: underline;
+  margin: 0 4px; /* small spacing around separators */
+  transition: all 0.3s ease;
+}
+
+.footer-contacts a:hover {
+  color: var(--pp-accent);
+  transform: translateY(-2px);
+}
+
