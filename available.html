@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fidgets | The Poop Print Project</title>
-    <meta name="description" content="Explore all free 3D-printed fidgets made from recycled scraps. Some are available, some may be sold out.">
+    <title>Available Fidgets | The Poop Print Project</title>
+    <meta name="description" content="Browse the available free fidgets made from 3D printer scraps. Only items currently in stock are shown.">
 
-    <!-- Favicon -->
+    <!-- Link to the favicon -->
     <link rel="icon" type="image/png" href="tp3logo.PNG">
 
     <link rel="stylesheet" href="styles.css">
@@ -19,8 +19,8 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="fidgets.html" class="nav-link active">Fidgets</a></li>
-                <li><a href="available.html" class="nav-link">Available</a></li>
+                <li><a href="fidgets.html" class="nav-link">Fidgets</a></li>
+                <li><a href="available.html" class="nav-link active">Available</a></li>
                 <li><a href="request.html" class="nav-link">Request</a></li>
             </ul>
         </div>
@@ -29,17 +29,17 @@
     <main class="main">
         <section class="section hero-simple">
             <div class="container">
-                <h1>Fidgets</h1>
-                <p class="lead">Browse all designs created from recycled filament scraps. Some may be sold out, others are ready to go.</p>
+                <h1>Available Fidgets</h1>
+                <p class="lead">See what’s in stock right now — updated as items are made and shared.</p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <p class="intro-text">These are all the different fidgets I’ve made so far. Availability changes depending on scraps and time, so not everything will always be in stock.</p>
+                <p class="intro-text">Only fidgets that are currently available are shown here. Check back often, as new designs appear whenever scraps are ready to be recycled.</p>
 
                 <div class="fidgets-gallery">
-                    <!-- Example fidget (repeat for each) -->
+                    <!-- Copy/paste the same fidget-showcase blocks from fidgets.html -->
                     <div class="fidget-showcase">
                         <img src="igloo.jpg" alt="Turning Fidget Death Star">
                         <div class="fidget-info">
@@ -128,11 +128,7 @@
                     </div>
                 </div>
 
-                <!-- NEW BUTTON TO AVAILABLE -->
-                <p style="margin-top: 2rem;">
-                    Want to see what’s ready right now?  
-                    <a href="available.html" class="btn-link">Check Available Fidgets →</a>
-                </p>
+                <p style="margin-top: 2rem;">Didn’t find what you’re looking for? <a href="request.html">Request your own fidget →</a></p>
             </div>
         </section>
     </main>
@@ -151,5 +147,17 @@
             </p>
         </div>
     </footer>
+
+    <!-- SCRIPT: Hide sold out fidgets -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".fidget-showcase").forEach(fidget => {
+                const status = fidget.querySelector(".fidget-status");
+                if (status && status.classList.contains("soldout")) {
+                    fidget.style.display = "none"; // hide sold out
+                }
+            });
+        });
+    </script>
 </body>
 </html>
